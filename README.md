@@ -263,9 +263,6 @@ Adapted for the MCPE 0.14 128-block height limit:
 
 This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
 
-
-
-<div align="center">
 ---
 
 ## Unofficial Redistributions Notice
@@ -276,6 +273,7 @@ Users should be careful with third-party redistributions, especially when source
 
 For details, see [Unofficial Redistributions Notice](docs/UNOFFICIAL_REDISTRIBUTIONS.md).
 
+<div align="center">
 
 **Made by SCAXE Team**
 
