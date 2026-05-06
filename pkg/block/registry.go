@@ -48,6 +48,7 @@ type BlockBehavior interface {
 	GetToolTier() int
 
 	GetDrops(toolType, toolTier int) []Drop
+	GetPlacementMeta(playerDirection int) uint8
 	Place(ctx *BlockContext) bool
 	OnBreak(ctx *BlockContext, toolType, toolTier int) bool
 	OnUpdate(ctx *BlockContext, updateType int) bool
