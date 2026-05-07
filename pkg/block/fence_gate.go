@@ -21,7 +21,7 @@ func newFenceGate(blockID uint8, name string) *FenceGateBlock {
 		},
 	}
 }
-func (b *FenceGateBlock) GetPlacementMeta(playerDirection int) uint8 {
+func (b *FenceGateBlock) GetPlacementMeta(playerDirection int, face int, clickY float64) uint8 {
 	return GetFenceGatePlacementMeta(playerDirection)
 }
 

@@ -1342,14 +1342,14 @@ func (s *Server) handleUseItem(p *player.Player, pkt *protocol.UseItemPacket) {
 			playerDirection := yawToDirection(p.Yaw)
 			placeMeta := byte(held.Meta)
 			if bh := block.Registry.GetBehavior(byte(placeID)); bh != nil {
-				placeMeta = bh.GetPlacementMeta(playerDirection)
+				placeMeta = bh.GetPlacementMeta(playerDirection, int(pkt.Face), float64(pkt.FY))
 			}
 
 			s.Level.SetBlock(tx, ty, tz, byte(placeID), placeMeta, false)
 
 			logger.Player("Placed block", "player", p.Username, "block", placeID,
 				"x", tx, "y", ty, "z", tz,
-				"Yaw", p.Yaw, "meta", placeMeta)
+				"Yaw", p.Yaw, "meta", placeMeta, "face", pkt.Face)
 
 			updatePk := protocol.NewUpdateBlockPacket(tx, ty, tz, uint8(placeID), placeMeta)
 			s.BroadcastPacket(updatePk)

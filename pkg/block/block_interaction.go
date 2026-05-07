@@ -71,6 +71,6 @@ func (d *DefaultBlockInteraction) GetStrongPower(face int, meta uint8) int {
 func (d *DefaultBlockInteraction) GetWeakPower(face int, meta uint8) int {
 	return 0
 }
-func (d *DefaultBlockInteraction) GetPlacementMeta(playerDirection int) uint8 {
+func (d *DefaultBlockInteraction) GetPlacementMeta(playerDirection int, face int, clickY float64) uint8 {
 	return 0
 }
